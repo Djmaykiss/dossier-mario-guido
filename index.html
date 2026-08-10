@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Dossier · Mario Guido (elBanano / TERRORRR) — Scouting de ajedrez</title>
+  <meta name="description" content="Dossier de scouting interactivo del ajedrecista Mario Guido (elBanano en Lichess, TERRORRR en Chess.com): repertorio, fortalezas, debilidades, plan de juego y partidas modelo con tableros jugables. Datos reales de 866 partidas.">
+  <meta name="keywords" content="ajedrez, scouting, dossier, Mario Guido, elBanano, TERRORRR, Chess.com, Lichess, Siciliana, preparación, repertorio">
+  <meta name="author" content="Preparado para Michael Perez">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f0e6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14150f" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://dossier-mario-guido.netlify.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dossier · Mario Guido">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Dossier · Mario Guido (elBanano / TERRORRR)">
+  <meta property="og:description" content="Scouting de ajedrez interactivo: repertorio, debilidades, plan de juego y partidas modelo con tableros jugables. Datos reales de 866 partidas.">
+  <meta property="og:url" content="https://dossier-mario-guido.netlify.app/">
+  <meta property="og:image" content="https://dossier-mario-guido.netlify.app/assets/img/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dossier de scouting de Mario Guido">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dossier · Mario Guido (elBanano / TERRORRR)">
+  <meta name="twitter:description" content="Scouting de ajedrez interactivo con tableros jugables y datos reales de 866 partidas.">
+  <meta name="twitter:image" content="https://dossier-mario-guido.netlify.app/assets/img/og-image.svg">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Evita parpadeo de tema: fija el tema antes de pintar -->
+  <script>
+    (function(){try{var k='dossier-theme',s=localStorage.getItem(k),
+      t=s||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- SEO estructurado -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Dossier · Mario Guido",
+   "description":"Dossier de scouting de ajedrez de Mario Guido (elBanano / TERRORRR) con tableros interactivos y datos reales.",
+   "inLanguage":"es","url":"https://dossier-mario-guido.netlify.app/"}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#resumen">Saltar al contenido</a>
+
+<!-- ============ HEADER FIJO ============ -->
+<header class="app-header">
+  <div class="app-header-inner">
+    <button id="menuBtn" class="icon-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <a class="hbrand" href="#resumen" aria-label="Inicio del dossier">
+      <span class="logo" aria-hidden="true">♟</span>
+      <span class="txt"><b>Dossier · Mario Guido</b><small>elBanano · TERRORRR</small></span>
+    </a>
+    <div class="search" role="search">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="search" type="search" placeholder="Buscar sección o partida…" autocomplete="off"
+               aria-label="Buscar en el dossier" aria-controls="results">
+        <kbd>/</kbd>
+      </div>
+      <div id="results" class="results" role="listbox" aria-label="Resultados de búsqueda"></div>
+    </div>
+    <div class="hspace"></div>
+    <button id="themeBtn" class="icon-btn" aria-label="Cambiar tema">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+    </button>
+  </div>
+</header>
+<div id="scrim" class="scrim" aria-hidden="true"></div>
+
+<div class="app-shell">
+  <!-- ============ SIDEBAR ============ -->
+  <aside id="sidebar" class="sidebar" aria-label="Índice del dossier">
+    <div class="brand">
+      <span class="eyebrow">Scouting · Clasificado</span>
+      <span class="who">Mario Guido</span>
+      <span class="alias">elBanano · TERRORRR</span>
+    </div>
+    <nav id="nav" aria-label="Navegación de secciones">
+      <a href="#resumen"><span class="n">01</span> Resumen ejecutivo</a>
+      <a href="#datos"><span class="n">02</span> Datos de la muestra</a>
+      <a href="#estilo"><span class="n">03</span> Perfil y estilo</a>
+      <div class="grp">Repertorio</div>
+      <a href="#blancas"><span class="n">04</span> Con blancas</a>
+      <a href="#negras"><span class="n">05</span> Con negras</a>
+      <div class="grp">Diagnóstico</div>
+      <a href="#fortalezas"><span class="n">06</span> Fortalezas</a>
+      <a href="#debilidades"><span class="n">07</span> Debilidades</a>
+      <div class="grp">Plan de juego</div>
+      <a href="#plan-blancas"><span class="n">08</span> Cómo jugarle</a>
+      <a href="#partidas"><span class="n">09</span> Partidas modelo</a>
+      <a href="#entrenamiento"><span class="n">10</span> Entrenamiento</a>
+      <a href="#tarjeta"><span class="n">11</span> Tarjeta rápida</a>
+      <a href="#anexo"><span class="n">12</span> Ejercicios (FEN)</a>
+    </nav>
+    <div class="side-foot">
+      Fuentes: <a href="https://www.chess.com/member/TERRORRR" target="_blank" rel="noopener">Chess.com</a> ·
+      <a href="https://lichess.org/@/elBanano" target="_blank" rel="noopener">Lichess</a><br>
+      Datos reales · actualización automática.
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+    <!-- HERO / RESUMEN -->
+    <section id="resumen" class="hero">
+      <div class="wrap">
+        <div class="kicker">Dossier de preparación <span id="updated" class="upd"></span></div>
+        <h1>Anti&#8209;<span class="amp">TERROR</span>：<br>desarma a Mario Guido</h1>
+        <div class="tagrow">
+          <span class="tag">Lichess <b>elBanano</b> · 2201 blitz</span>
+          <span class="tag">Chess.com <b>TERRORRR</b> · ~1786</span>
+          <span class="tag">Nivel real <b>~1750–1800</b></span>
+          <span class="tag">Estilo <b>Atacante táctico</b></span>
+        </div>
+        <p class="verdict">Atacante directo, de iniciativa y golpe sobre el rey, con un repertorio
+          <b>estrecho y muy repetitivo</b> que puedes anticipar casi al 100%. No lo superes en su terreno:
+          juega sólido, quítale la iniciativa, <b>cambia damas</b> y arrástralo a finales largos —
+          donde su reloj y su técnica de torres hacen el trabajo por ti.</p>
+
+        <div class="kpis">
+          <div class="kpi"><span class="cap">Muestra</span><div class="v" data-live="total">866</div><div class="l">partidas reales analizadas (2019–2026)</div></div>
+          <div class="kpi good"><span class="cap">Global</span><div class="v" data-live="winpct">55.8%</div><div class="l">resultado global · <span data-live="wdltext">457 G / 52 T / 357 P</span></div></div>
+          <div class="kpi alert"><span class="cap">Talón de Aquiles</span><div class="v" data-live="timeoutpct">20%</div><div class="l">de sus derrotas son por <b>caída de bandera</b></div></div>
+          <div class="kpi"><span class="cap">Predecible</span><div class="v" data-live="sicilianpct">88%</div><div class="l">Siciliana con negras contra 1.e4</div></div>
+        </div>
+
+        <div class="wdl" aria-hidden="true">
+          <i class="w" data-live="wbar" style="width:52.8%"></i><i class="d" data-live="dbar" style="width:6%"></i><i class="l" data-live="lbar" style="width:41.2%"></i>
+        </div>
+        <div class="wdl-legend">
+          <span><i class="dot" style="background:var(--ally)"></i> <span data-live="wn">457</span> Ganadas</span>
+          <span><i class="dot" style="background:var(--ink-faint)"></i> <span data-live="dn">52</span> Tablas</span>
+          <span><i class="dot" style="background:var(--danger)"></i> <span data-live="ln">357</span> Perdidas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATOS -->
+    <section id="datos">
+      <div class="wrap">
+        <div class="kicker">02 · Datos de la muestra</div>
+        <h2>866 partidas reales, no estimaciones</h2>
+        <p>Todo procede de las cuentas públicas vía las APIs de Chess.com y Lichess. La base del análisis
+          de partidas son las <strong>866 partidas de Chess.com (100% blitz 5&nbsp;min)</strong>; el perfil
+          de Lichess se leyó, pero sus partidas individuales no se pudieron descargar (bloqueo 429).</p>
+
+        <div class="cards two">
+          <div class="card">
+            <h4>Chess.com · TERRORRR <span class="badge mid">base principal</span></h4>
+            <ul>
+              <li><b>866</b> partidas · 100% Blitz (5 min) · 2019 → 2026</li>
+              <li>Blancas <b>435</b> → 59.9% · Negras <b>431</b> → 51.6%</li>
+              <li>Rating: rango 1109–1850 · mediana <b>~1745</b> · mejor 1850</li>
+              <li>Precisión motor (60 pdas. con review): media <b>72.1%</b></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Lichess · elBanano <span class="badge lo">solo perfil</span></h4>
+            <ul>
+              <li>Blitz <b>2201</b> (983) · Rapid 1923 (61) · Bullet 1604</li>
+              <li>Total 1126 pdas. · 555 G / 64 T / 507 P</li>
+              <li>Cuenta jun-2019 · activa en 2026</li>
+              <li class="mono" style="font-size:12px">2201 Lichess ≈ 1750–1800 Chess.com (misma persona)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">
+          <p><b>Sesgo declarado:</b> todo es blitz de 5 minutos. Refleja fielmente su repertorio y sus reflejos;
+          las conclusiones sobre finales y reloj son propias del blitz — en partidas lentas mejoraría algo,
+          pero el patrón de debilidad se mantiene.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTILO -->
+    <section id="estilo">
+      <div class="wrap">
+        <div class="kicker">03 · Perfil y estilo</div>
+        <h2>Atacante peligroso, pero predecible</h2>
+        <p>Jugador <strong>práctico de club</strong>: confía en esquemas conocidos y en la táctica, no en la
+          teoría profunda. Repertorio muy repetitivo — con blancas <strong>1.e4 + Ac4</strong>; con negras
+          <strong>Siciliana + …d5</strong>. Pelea partidas completas (longitud mediana ~36 jugadas).</p>
+
+        <h3>Radiografía de estilo</h3>
+        <div class="bars">
+          <div class="bar"><span class="lab">Táctico</span><div class="track"><div class="fill danger" data-w="92"></div></div><span class="pct">ALTO</span></div>
+          <div class="bar"><span class="lab">Ataque al rey</span><div class="track"><div class="fill danger" data-w="90"></div></div><span class="pct">ALTO</span></div>
+          <div class="bar"><span class="lab">Iniciativa</span><div class="track"><div class="fill danger" data-w="85"></div></div><span class="pct">ALTO</span></div>
+          <div class="bar"><span class="lab">Posicional</span><div class="track"><div class="fill" data-w="50"></div></div><span class="pct">MEDIO</span></div>
+          <div class="bar"><span class="lab">Cálculo largo</span><div class="track"><div class="fill ally" data-w="38"></div></div><span class="pct">BAJO</span></div>
+          <div class="bar"><span class="lab">Defensa</span><div class="track"><div class="fill ally" data-w="30"></div></div><span class="pct">BAJO</span></div>
+          <div class="bar"><span class="lab">Técnica de finales</span><div class="track"><div class="fill ally" data-w="28"></div></div><span class="pct">BAJO</span></div>
+        </div>
+        <p class="note">Barras rojas = donde es fuerte (no lo enfrentes ahí). Barras verdes = donde tú tienes ventaja.</p>
+
+        <div class="cards two" style="margin-top:18px">
+          <div class="card accent">
+            <h4>Cómo inicia sus ataques</h4>
+            <p>Alfil a <span class="mono">c4</span> apuntando a f7, dama a <span class="mono">h5/f3</span>,
+            avance <span class="mono">h4-h5</span> contra fianchettos y salto <span class="mono">Cd5</span>.
+            En enroques opuestos empuja peones de flanco antes de completar el desarrollo.</p>
+          </div>
+          <div class="card">
+            <h4>Qué busca / qué evita</h4>
+            <ul>
+              <li><b>Busca:</b> centro abierto, diagonal a2–g8, caos, enroques opuestos.</li>
+              <li><b>Evita:</b> teoría (Bird, Bowdler), cambiar damas, simetría …d5, finales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLANCAS -->
+    <section id="blancas">
+      <div class="wrap">
+        <div class="kicker">04 · Repertorio con blancas (435)</div>
+        <h2>1.e4 + Ac4… y una sorpresa: la Bird</h2>
+        <div class="bars" id="chartWhiteFirst">
+          <div class="bar"><span class="lab">1.e4</span><div class="track"><div class="fill" data-w="73"></div></div><span class="pct">73%</span></div>
+          <div class="bar"><span class="lab">1.f4 (Bird)</span><div class="track"><div class="fill" data-w="12"></div></div><span class="pct">12%</span></div>
+          <div class="bar"><span class="lab">1.d4</span><div class="track"><div class="fill" data-w="11"></div></div><span class="pct">11%</span></div>
+          <div class="bar"><span class="lab">1.c4</span><div class="track"><div class="fill" data-w="3"></div></div><span class="pct">3%</span></div>
+        </div>
+
+        <h3>Sistemas con blancas y cómo responder</h3>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Situación</th><th>Su arma favorita</th><th>Rend.</th><th>Tu respuesta</th></tr></thead>
+            <tbody>
+              <tr><td>vs 1…e5</td><td><code>2.Ac4</code> + Dh5/Df3</td><td><span class="badge hi">bueno</span></td><td>No cedas f7; …Cf6, …Ac5 y castiga la Dh5 prematura</td></tr>
+              <tr><td>vs Siciliana</td><td><code>2.Ac4</code> Bowdler</td><td><span class="badge hi">65%</span></td><td>…e6 y ruptura …d5; su Ac4 queda mal</td></tr>
+              <tr><td>vs Caro-Kann</td><td>líneas de cambio / Ac4</td><td><span class="badge mid">mixto</span></td><td>Sólido para ti</td></tr>
+              <tr><td>vs Francesa</td><td>La Bourdonnais 2.d5</td><td><span class="badge mid">62%</span></td><td>Evita líneas cerradas donde ataca</td></tr>
+              <tr><td>1.f4 Bird</td><td>estructura holandesa, g3</td><td><span class="badge hi">63%</span></td><td>Responde <code>1…d5</code> y <code>2…Af5/Ag4</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout danger">
+          <p><b>Trampas frecuentes:</b> <span class="mono">Dh5</span> en la jugada 3 · <span class="mono">Axf7+ → Cxe5+</span>
+          en la Italiana · red de mate <span class="mono">Cd5 → Cf6+ → Ah6#</span>. Las verás en vivo en la sección 09.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEGRAS -->
+    <section id="negras">
+      <div class="wrap">
+        <div class="kicker">05 · Repertorio con negras</div>
+        <h2>Siciliana casi siempre… y sólido contra 1.d4</h2>
+
+        <div class="cards two">
+          <div class="card">
+            <h4>Contra 1.e4 → Siciliana <span data-live="sicilianpct">88%</span></h4>
+            <div class="bars" id="chartBlackE4" style="margin-top:6px">
+              <div class="bar"><span class="lab">1…c5</span><div class="track"><div class="fill" data-w="88"></div></div><span class="pct">88%</span></div>
+              <div class="bar"><span class="lab">1…e5</span><div class="track"><div class="fill" data-w="8"></div></div><span class="pct">8%</span></div>
+              <div class="bar"><span class="lab">otras</span><div class="track"><div class="fill" data-w="4"></div></div><span class="pct">4%</span></div>
+            </div>
+            <p style="margin-top:8px">Tipo <b>…Cc6 + …e6</b> (Paulsen/Taimanov) o <b>…g6</b> (Acelerada). Rara vez Najdorf.</p>
+          </div>
+          <div class="card">
+            <h4>Contra 1.d4 → sólido y poco ambicioso</h4>
+            <div class="bars" style="margin-top:6px">
+              <div class="bar"><span class="lab">1…d5</span><div class="track"><div class="fill" data-w="47"></div></div><span class="pct">47%</span></div>
+              <div class="bar"><span class="lab">1…Cf6→d5</span><div class="track"><div class="fill" data-w="29"></div></div><span class="pct">29%</span></div>
+              <div class="bar"><span class="lab">1…g6</span><div class="track"><div class="fill" data-w="15"></div></div><span class="pct">15%</span></div>
+            </div>
+            <p style="margin-top:8px">Gambito de Dama / Eslava. <b>No</b> es teórico de Nimzo/Grünfeld.</p>
+          </div>
+        </div>
+
+        <div class="callout ally">
+          <p><b>🔑 Clave explotable:</b> contra un blanco que juega lento con <span class="mono">Ac4 / d3 / Cc3</span>
+          — ¡su propio esquema! — Mario no encuentra ataque y su rendimiento cae a <b>16–25%</b>. Es tu mejor
+          arma con blancas (ver sección 08).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORTALEZAS -->
+    <section id="fortalezas">
+      <div class="wrap">
+        <div class="kicker">06 · Fortalezas</div>
+        <h2>Dónde NO debes pelear</h2>
+        <div class="cards two">
+          <div class="card danger"><h4>⚔️ Golpes en f7 / f2</h4><p><span class="mono">Axf7+, Cxe5+, Df7#</span> en 14 jugadas contra un 1854. Cualquier descuido en f7 lo aprovecha al instante.</p></div>
+          <div class="card danger"><h4>🕸️ Redes de mate Cd5 / Ah6</h4><p><span class="mono">Cf6+, Ah6#</span> es su melodía favorita. No dejes el caballo entrar a d5 gratis.</p></div>
+          <div class="card danger"><h4>🏰 Enroques opuestos</h4><p>Avalancha <span class="mono">…b5, …Da5, …Dxa2, …Dxb2+</span>. Letal cuando ataca él.</p></div>
+          <div class="card danger"><h4>⚡ Iniciativa y reflejos blitz</h4><p>Toma la delantera pronto con Dh5/Ac4/h4-h5 y juega rápido y seguro dentro de su repertorio estrecho.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEBILIDADES -->
+    <section id="debilidades">
+      <div class="wrap">
+        <div class="kicker">07 · Debilidades — la sección clave</div>
+        <h2>Dónde SÍ ganas la partida</h2>
+        <div class="cards">
+          <div class="card ally">
+            <h4>⏱️ Gestión del tiempo <span class="badge hi">DEBILIDAD Nº1 · HECHO</span></h4>
+            <p><b>73 derrotas por caída de bandera = 20% de todas sus derrotas</b>, muchas en posiciones igualadas
+            o mejores. Consume el reloj en el medio juego buscando ataque y llega corto a los finales.
+            Ejemplo real: de 5:00 a 0:19 en un final de torres cómodo, y pierde por tiempo.</p>
+          </div>
+          <div class="cards two" style="margin-top:2px">
+            <div class="card ally"><h4>♜ Finales de torres</h4><p>Alarga finales tablas o ligeramente mejores 40–70 jugadas sin convertir ni asegurar, y termina perdiendo (a menudo por bandera).</p></div>
+            <div class="card ally"><h4>🛡️ Defensa bajo contraataque</h4><p>Cuando su ataque no llega y le golpean el enroque, colapsa. Sobreextiende <span class="mono">h/b</span> y deja su rey aireado.</p></div>
+            <div class="card ally"><h4>🎯 Fuera de repertorio se hunde</h4><p>Probó una Pirc (rarísimo en él) y le dieron mate en 9. Sacarlo de la Siciliana/…d5 lo desorienta.</p></div>
+            <div class="card ally"><h4>🔀 Simplificación imprecisa</h4><p>Juega para atacar; cuando toca simplificar o cambiar damas, pierde el hilo.</p></div>
+          </div>
+        </div>
+        <div class="callout ally">
+          <p><b>Táctica que FALLA:</b> carreras defensivas en enroques opuestos, clavadas/sobrecargas sobre sus
+          piezas de ataque, golpes intermedios (zwischenzug) al recuperar material, y técnica de torres bajo reloj.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN -->
+    <section id="plan-blancas">
+      <div class="wrap">
+        <div class="kicker">08 · Plan de juego</div>
+        <h2>Cómo jugarle — repertorio accionable</h2>
+        <div class="tabs" id="planTabs" role="tablist">
+          <button class="tab active" data-pane="pb">Con blancas</button>
+          <button class="tab" data-pane="pn">Con negras</button>
+        </div>
+
+        <div class="tabpane active" id="pb">
+          <div class="callout ally">
+            <p><b>⭐ Opción principal — su propio veneno.</b> Anti-Siciliana lenta tipo italiano, justo el esquema
+            donde él, como negro, rinde 16–25%:</p>
+          </div>
+          <div class="line"><b>1.e4 c5 2.Cf3 Cc6 3.Ac4 e6 4.d3 5.c3 y d4</b> en el momento justo</div>
+          <p style="margin-top:14px">Le niegas el ataque, mantienes estructura sana y, en cuanto tengas ventaja,
+            <b>cambias damas</b> y vas al final. Ataca el centro y el flanco de dama; nunca te lances a su flanco de rey.</p>
+          <div class="cards two">
+            <div class="card"><h4>Opción sólida (torneo)</h4><p><b>Alapin 2.c3.</b> Estructura clara, poco táctica, lo saca de sus planes …b5-b4.</p></div>
+            <div class="card"><h4>Opción agresiva (solo con teoría)</h4><p><b>Siciliana Abierta</b> Taimanov 5.Cc3, 6.Ae3, 0-0-0. Peligroso: en enroques opuestos él muerde. Solo si la has estudiado.</p></div>
+          </div>
+          <p>Contra <b>1…e5</b> (7%): Española <span class="mono">3.Ab5</span> o Italiana con d3. No imites su Dh5.</p>
+        </div>
+
+        <div class="tabpane" id="pn">
+          <div class="callout ally">
+            <p><b>⭐ Recomendada — Caro-Kann.</b> Neutraliza su Ac4/Dh5 y no hay objetivo en f7:</p>
+          </div>
+          <div class="line"><b>1.e4 c6 2.d4 d5</b> — alfil de c8 sale por f5/g4 antes de …e6</div>
+          <div class="cards two" style="margin-top:14px">
+            <div class="card"><h4>Sorpresa — Escandinava</h4><p><b>1…d5 2.exd5 Cf6/Df6.</b> Evita su Italiana/Bowdler por completo y lo lleva a terreno poco practicado.</p></div>
+            <div class="card"><h4>vs 1.f4 Bird</h4><p><b>1…d5, …Cf6, …g6/…Af5, …c5.</b> El peón f4 debilita su rey; presiona la columna f.</p></div>
+            <div class="card"><h4>vs 1.d4 / 1.c4 / 1.Cf3</h4><p><b>Eslava 1…d5 2…c6.</b> Sólida, tranquila, sin debilidades — el tipo de posición que a él le aburre.</p></div>
+            <div class="card danger"><h4>✕ A evitar</h4><p><b>No juegues su propia Siciliana</b> …Cc6+…e6 contra él, ni entres en enroques opuestos: es su terreno.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTIDAS -->
+    <section id="partidas">
+      <div class="wrap">
+        <div class="kicker">09 · Partidas modelo · interactivas</div>
+        <h2>Reproduce sus patrones, jugada a jugada</h2>
+        <p>Seis partidas reales de Chess.com, sin alterar. Usa las flechas o pincha cualquier jugada; el tablero
+          resalta el último movimiento y las notas explican el momento clave.</p>
+      </div>
+
+      <div class="wrap" id="recent-wrap" style="display:none">
+        <h3 style="display:flex;align-items:center;gap:10px">
+          <span class="livedot"></span> Partidas recientes <span class="badge mid">automático</span>
+        </h3>
+        <p style="margin-bottom:6px">Últimas partidas descargadas de su cuenta de Chess.com, añadidas automáticamente.
+          <span id="recent-count" class="mono" style="color:var(--ink-faint)"></span></p>
+        <div id="recent-games"></div>
+      </div>
+
+      <div class="wrap"><h3 style="margin-top:30px">Partidas modelo comentadas</h3></div>
+      <div class="wrap" id="games"></div>
+    </section>
+
+    <!-- ENTRENAMIENTO -->
+    <section id="entrenamiento">
+      <div class="wrap">
+        <div class="kicker">10 · Plan de entrenamiento</div>
+        <h2>De la teoría al tablero</h2>
+        <div class="tabs" id="trainTabs" role="tablist">
+          <button class="tab active" data-pane="t7">7 días</button>
+          <button class="tab" data-pane="t14">14 días</button>
+          <button class="tab" data-pane="t30">30 días</button>
+          <button class="tab" data-pane="tpz">Puzzles Lichess</button>
+        </div>
+
+        <div class="tabpane active" id="t7">
+          <div class="tablewrap"><table>
+            <thead><tr><th>Día</th><th>Apertura</th><th>Táctica / Finales</th><th>Objetivo</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Anti-Siciliana lenta (Ac4+d3+c3-d4)</td><td>attackingF2F7 ×10</td><td>Entender su ataque a f7</td></tr>
+              <tr><td>2</td><td>Caro-Kann vs 1.e4</td><td>rookEndgame ×15</td><td>Asimilar su debilidad de tiempo</td></tr>
+              <tr><td>3</td><td>Repaso + Alapin 2.c3</td><td>kingsideAttack ×10</td><td>Contraatacar su rey</td></tr>
+              <tr><td>4</td><td>Eslava vs 1.d4 + anti-Bird</td><td>pawnEndgame ×10</td><td>Finales que él no convierte</td></tr>
+              <tr><td>5</td><td>Explorador: 3.Ac4 e6 exacto</td><td>defensiveMove ×10</td><td>Evitar enroques opuestos</td></tr>
+              <tr><td>6</td><td>Escandinava anti-comodidad</td><td>pin + fork ×16</td><td>Sacarlo de su repertorio</td></tr>
+              <tr><td>7</td><td><b>Simulación:</b> 3 blitz con el plan</td><td>repaso de fallos</td><td>Consolidar</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="tabpane" id="t14">
+          <div class="cards two">
+            <div class="card"><h4>Días 1–7</h4><p>El plan completo de 7 días.</p></div>
+            <div class="card"><h4>Día 8</h4><p>Transición «cambio de damas → final de torres» (Lichess Practice: Rook Endgames).</p></div>
+            <div class="card"><h4>Día 9</h4><p>20 puzzles rookEndgame + 2 blitz forzando finales.</p></div>
+            <div class="card"><h4>Día 10</h4><p>Repertorio blanco de memoria: 10 primeras jugadas sin dudar.</p></div>
+            <div class="card"><h4>Día 11</h4><p>Repertorio negro Caro + Escandinava de memoria.</p></div>
+            <div class="card"><h4>Día 12</h4><p>Anti-Bird y anti-1.d4 pulidos; 15 puzzles defensiveMove.</p></div>
+            <div class="card"><h4>Día 13</h4><p>Revisar tus propias partidas contra su estilo.</p></div>
+            <div class="card"><h4>Día 14</h4><p><b>Simulacro:</b> 5 blitz priorizando solidez + reloj; anota las caídas de tiempo.</p></div>
+          </div>
+        </div>
+        <div class="tabpane" id="t30">
+          <div class="cards two">
+            <div class="card accent"><h4>Semana 1 — Conocer al rival</h4><p>Plan de 7 días: fundamentos anti-repertorio y patrones de ataque.</p></div>
+            <div class="card accent"><h4>Semana 2 — Memorizar + finales</h4><p>Repertorio de memoria y técnica de finales de torres (días 8–14).</p></div>
+            <div class="card accent"><h4>Semana 3 — Profundizar</h4><p>Teoría anti-Siciliana lenta hasta jugada 15, Caro-Kann completo, 30 puzzles de torres, kingsideAttack + defensiveMove, y revisar 20 partidas nuevas suyas.</p></div>
+            <div class="card accent"><h4>Semana 4 — Pulido y simulación</h4><p>15 puzzles mixtos/día (énfasis finales), 2 sesiones de torres, 3 sesiones de blitz con control de reloj. Último día: releer la tarjeta rápida.</p></div>
+          </div>
+        </div>
+        <div class="tabpane" id="tpz">
+          <p>Enlaces reales a Lichess Puzzle Themes. Empieza en dificultad automática; sube al acertar &gt;80%.</p>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Tema</th><th>Por qué contra Mario</th><th>Dosis/día</th></tr></thead>
+            <tbody>
+              <tr><td><a class="link" href="https://lichess.org/training/rookEndgame" target="_blank" rel="noopener">rookEndgame</a></td><td><b>Su mayor debilidad</b></td><td class="mono">15</td></tr>
+              <tr><td><a class="link" href="https://lichess.org/training/attackingF2F7" target="_blank" rel="noopener">attackingF2F7</a></td><td>Su ataque estrella (defenderlo)</td><td class="mono">10</td></tr>
+              <tr><td><a class="link" href="https://lichess.org/training/kingsideAttack" target="_blank" rel="noopener">kingsideAttack</a></td><td>Explotar su rey cuando sobreextiende</td><td class="mono">10</td></tr>
+              <tr><td><a class="link" href="https://lichess.org/training/defensiveMove" target="_blank" rel="noopener">defensiveMove</a></td><td>Aguantar su iniciativa</td><td class="mono">10</td></tr>
+              <tr><td><a class="link" href="https://lichess.org/training/pawnEndgame" target="_blank" rel="noopener">pawnEndgame</a></td><td>Convertir el final que él falla</td><td class="mono">10</td></tr>
+              <tr><td><a class="link" href="https://lichess.org/training/pin" target="_blank" rel="noopener">pin</a> · <a class="link" href="https://lichess.org/training/fork" target="_blank" rel="noopener">fork</a></td><td>Frenar y castigar sus piezas de ataque</td><td class="mono">8+8</td></tr>
+              <tr><td><a class="link" href="https://lichess.org/training/trappedPiece" target="_blank" rel="noopener">trappedPiece</a></td><td>Atrapar su Ac4 / Dh5</td><td class="mono">6</td></tr>
+            </tbody>
+          </table></div>
+          <p class="note">Recursos verificados: <a class="link" href="https://lichess.org/practice" target="_blank" rel="noopener">Lichess Practice</a> (Rook/Pawn Endgames, Checkmate Patterns) · <a class="link" href="https://lichess.org/opening/Sicilian_Defense" target="_blank" rel="noopener">Explorador de aperturas</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARJETA -->
+    <section id="tarjeta">
+      <div class="wrap">
+        <div class="kicker">11 · Tarjeta rápida</div>
+        <h2>Léela 5 minutos antes de jugar</h2>
+        <div class="qcard">
+          <div class="qh">Rival: Mario Guido · elBanano / TERRORRR · ~1750–1800 · atacante táctico</div>
+          <div class="qgrid">
+            <div class="qblock">
+              <h5>♙ Con blancas</h5>
+              <ul>
+                <li>Apertura: <b>1.e4; vs Siciliana → 2.Cf3 Cc6 3.Ac4 e6 4.d3 5.c3 y d4</b></li>
+                <li>Plan: estructura sana, sin ataques al rey, <b>cambiar damas</b>, ir al final</li>
+                <li>Ataca: su <b>reloj</b> y su técnica de <b>finales de torres</b></li>
+                <li>Evita: regalar f7 (nada de …Cd4); cuidado con Dh5/Axf7+</li>
+              </ul>
+            </div>
+            <div class="qblock">
+              <h5>♟ Con negras</h5>
+              <ul>
+                <li>Defensa: <b>Caro-Kann (1…c6 2.d4 d5)</b>. Sorpresa: Escandinava</li>
+                <li>Plan: neutralizar Ac4, sacar el alfil por f5/g4, solidez y final</li>
+                <li>Si sobreextiende peones: <b>contraataca su rey (…f5-f4)</b></li>
+                <li>Cambio favorable: <b>damas</b> y su alfil de c4</li>
+              </ul>
+            </div>
+          </div>
+          <div class="qgrid" style="margin-top:22px">
+            <div class="qblock no">
+              <h5 style="color:var(--danger)">No hacer</h5>
+              <ul>
+                <li>No dejar <b>f7/f2</b> débiles ni poner el caballo en d4/d5 gratis</li>
+                <li>No entrar en enroques opuestos ni carreras de peones con él</li>
+                <li>No jugar rápido/impreciso: administra <b>tu</b> reloj mejor que él</li>
+              </ul>
+            </div>
+            <div class="qblock">
+              <h5>Recordatorio</h5>
+              <ul>
+                <li>Partida <b>larga y sana</b> = partida ganada</li>
+                <li>Su bandera y sus finales de torre son tu mejor aliado</li>
+                <li>Paciencia &gt; adrenalina</li>
+              </ul>
+            </div>
+          </div>
+          <div class="foot"><b>Si recuerdas una sola cosa:</b> no juegues a su ritmo. Juega sólido, cambia damas, ve al final, y gana con paciencia y con el reloj.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANEXO FEN -->
+    <section id="anexo">
+      <div class="wrap">
+        <div class="kicker">12 · Ejercicios de entrenamiento (FEN)</div>
+        <h2>Posiciones-tipo para practicar</h2>
+        <p>Copia el FEN en <a class="link" href="https://lichess.org/analysis" target="_blank" rel="noopener">lichess.org/analysis</a> y juega el plan correcto.</p>
+        <div class="cards">
+          <div class="card">
+            <h4>1 · Neutralizar su Ac4 con negras (Caro-Kann) <span class="badge lo">juegan negras</span></h4>
+            <div class="fen">rn1qkbnr/pp2pppp/2p5/3p1b2/2PP4/2N5/PP2BPPP/R1BQK1NR b KQkq - 0 5</div>
+            <p style="margin-top:10px"><b>Plan:</b> …e6, …Cf6, …Ae7/…Ad6, …0-0 y ruptura …c5 o …dxc4 a tiempo. Igualdad cómoda, sin ataque para él.</p>
+          </div>
+          <div class="card">
+            <h4>2 · Tu anti-Siciliana lenta: busca el cambio de damas <span class="badge mid">juegan blancas</span></h4>
+            <div class="fen">r1bqk2r/pp3ppp/2nbpn2/3p4/8/2PP1N2/PP2BPPP/RNBQ1RK1 w kq - 0 8</div>
+            <p style="margin-top:10px"><b>Plan:</b> Cbd2, Te1, d4 y, si aparece, cambiar damas para ir al final. Estructura mejor + reloj a tu favor.</p>
+          </div>
+          <div class="card">
+            <h4>3 · Final de torres: convierte lo que él falla <span class="badge mid">juegan blancas</span></h4>
+            <div class="fen">8/5pk1/6p1/7p/1R6/4K3/r4PPP/8 w - - 0 1</div>
+            <p style="margin-top:10px"><b>Plan:</b> torre detrás del peón pasado, rey activo, crear pasado y cortar al rey rival. La técnica que a él le cuesta bajo reloj.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><b>Verificación de datos.</b> Todas las estadísticas provienen de 866 partidas reales de Chess.com
+      (API pública, 2019–2026). Perfil de Lichess leído por API; sus partidas individuales no disponibles
+      (bloqueo 429), declarado. Los PGN reproducen las jugadas originales sin alterar. Las variantes
+      recomendadas son propuestas del entrenador. Perfiles:
+      <a class="link" href="https://www.chess.com/member/TERRORRR" target="_blank" rel="noopener">chess.com/TERRORRR</a> ·
+      <a class="link" href="https://lichess.org/@/elBanano" target="_blank" rel="noopener">lichess/elBanano</a>.</p>
+    </footer>
+  </main>
+</div>
+
+<button id="backTop" aria-label="Volver arriba" title="Volver arriba">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script id="dossier-data">/*DATA_START*/window.DOSSIER_DATA={"updatedAt":"2026-08-10T18:09:55.344Z","chesscomUser":"terrorrr","chesscom":{"total":866,"wins":457,"draws":52,"losses":357,"timeoutLosses":73,"timeoutPct":20.4,"white":{"n":435,"wins":247,"draws":27,"losses":161},"black":{"n":431,"wins":210,"draws":25,"losses":196},"ratingMin":1109,"ratingMax":1850,"ratingMedian":1745,"ratingLatest":1786,"firstMoveWhite":[{"label":"1.e4","n":318,"pct":73.1},{"label":"1.f4 (Bird)","n":52,"pct":12},{"label":"1.d4","n":47,"pct":10.8},{"label":"1.c4","n":14,"pct":3.2},{"label":"otras","n":3,"pct":0.7}],"blackVsE4":[{"label":"1…c5","n":233,"pct":88.9},{"label":"1…e5","n":19,"pct":7.3},{"label":"1…g6","n":4,"pct":1.5},{"label":"otras","n":3,"pct":1.1}],"sicilianPct":88.9,"lastGameDate":"2026-07-27"},"lichess":{"blitz":2201,"rapid":1957,"bullet":1604,"totalGames":1140,"wins":564,"draws":67,"losses":509,"lastOnline":"2026-08-09T04:37:24.253Z"},"recentGames":[{"url":"https://www.chess.com/game/live/172133859292","title":"vs chejohnson02 (1742)","meta":"2026-07-27 · Blitz · Alapin Sicilian Defense · Mario con negras · su rating 1786","hero":"b","res":"Gana Mario","rc":"win","notes":{},"lesson":"","pgn":"1. e4   1... c5   2. Nf3   2... Nc6   3. c3   3... e6   4. Bc4   4... d5   5. exd5   5... exd5   6. Bb5   6... Ne7   7. O-O   7... g6   8. Re1   8... Bg7   9. Bxc6+   9... bxc6   10. d4   10... cxd4   11. Nxd4   11... O-O   12. Bg5   12... f6   13. Bf4   13... Qb6   14. b3   14... Nf5   15. Nxf5   15... Bxf5   16. Nd2   16... g5   17. Bd6   17... Rfe8   18. Qf3   18... Bg6   19. Rad1   19... f5   20. c4   20... dxc4   21. Nxc4   21... Qa6   22. Be5   22... Bxe5   23. Rxe5   23... Red8   24. Ree1   24... Qxa2   25. Qxc6   25... Qxb3   26. Rxd8+   26... Rxd8   27. Qc7   27... Rd1   28. Qc8+   28... Kg7   29. Qc7+   29... Bf7   30. Qe5+   30... Kg6   31. Nd6   31... Rxe1+   32. Qxe1   32... Qe6   33. Qb4   33... a5   34. Nxf7   0-1"},{"url":"https://www.chess.com/game/live/172133555254","title":"vs bcruzs (1798)","meta":"2026-07-27 · Blitz · Old Benoni Defense · Mario con negras · su rating 1774","hero":"b","res":"Pierde","rc":"loss","notes":{},"lesson":"","pgn":"1. d4   1... c5   2. dxc5   2... Nc6   3. Nf3   3... g6   4. c3   4... Bg7   5. Bf4   5... e6   6. Bd6   6... Nge7   7. e4   7... O-O   8. Bc4   8... a6   9. Qe2   9... b5   10. Bb3   10... Bb7   11. Nbd2   11... Na5   12. Bc2   12... Rc8   13. e5   13... Re8   14. b4   14... Nc4   15. Nxc4   15... bxc4   16. O-O   16... Bd5   17. Nd4   17... Nc6   18. a4   18... Qg5   19. f4   19... Qh6   20. Be4   20... f5   21. Nxc6   21... dxc6   22. Bxd5   22... exd5   23. Rab1   23... Re6   24. b5   24... axb5   25. axb5   25... cxb5   26. Rxb5   26... Qh4   27. Qf3   27... Bh6   28. g3   28... Qd8   29. Qxd5   29... Qd7   30. Rb7   30... Qe8   31. Qxc4   31... Ra8   32. c6   32... Rc8   33. c7   33... Bf8   34. Rb8   34... Bxd6   35. Rxc8   35... Qxc8   36. exd6   36... Kg7   37. Re1   37... Rxe1+   38. Kf2   38... Re8   39. Qd4+   39... Kf7   40. d7   40... Qxc7   41. dxe8=Q+   41... Kxe8   42. Qe5+   42... Qe7   43. Qxe7+   43... Kxe7   44. Ke3   44... Kd6   45. Kd4   45... Kd7   46. Ke5   46... Ke7   47. c4   47... h6   48. c5   48... g5   49. fxg5   49... hxg5   50. Kxf5   50... g4   51. Kxg4   51... Kd7   52. h4   52... Kc6   53. h5   53... Kxc5   54. h6   54... Kd6   55. h7   55... Ke7   56. h8=Q   56... Kf7   57. Qa1   57... Kg6   58. Qa6+   58... Kg7   59. Kg5   59... Kh7   60. g4   60... Kg7   61. Qa7+   61... Kf8   62. Kf6   62... Kg8   63. Qg7#   1-0"},{"url":"https://www.chess.com/game/live/168472025728","title":"vs Jclive91 (1842)","meta":"2026-05-09 · Blitz · English Opening Two Knights Variation · Mario con blancas · su rating 1787","hero":"w","res":"Pierde","rc":"loss","notes":{},"lesson":"","pgn":"1. c4   1... Nf6   2. Nc3   2... e5   3. d3   3... c6   4. Bg5   4... d5   5. g3   5... d4   6. Ne4   6... Be7   7. Bxf6   7... Bxf6   8. Bg2   8... O-O   9. Nf3   9... Be7   10. O-O   10... f5   11. Ned2   11... Bd6   12. c5   12... Bc7   13. Nc4   13... Nd7   14. b4   14... Qf6   15. Qb3   15... Kh8   16. a4   16... e4   17. Nfd2   17... e3   18. fxe3   18... dxe3   19. Nxe3   19... Ne5   20. Nec4   20... Ng4   21. e4   21... Qh6   22. e5   22... Qxh2#   0-1"},{"url":"https://www.chess.com/game/live/168471911678","title":"vs Malogalijevopagamalo (1799)","meta":"2026-05-09 · Blitz · English Opening Two Knights Variation · Mario con blancas · su rating 1794","hero":"w","res":"Pierde","rc":"loss","notes":{},"lesson":"","pgn":"1. c4   1... e5   2. Nc3   2... Nf6   3. d3   3... Bb4   4. Bg5   4... d6   5. g3   5... Be6   6. Bg2   6... c6   7. Nf3   7... Nbd7   8. O-O   8... Bxc3   9. bxc3   9... Qc7   10. Rb1   10... O-O   11. Qb3   11... Rab8   12. a4   12... a6   13. Rb2   13... b5   14. axb5   14... axb5   15. Bxf6   15... bxc4   16. Qc2   16... Rxb2   17. Qxb2   17... Nxf6   18. Ng5   18... cxd3   19. Nxe6   19... fxe6   20. exd3   20... d5   21. Rb1   21... e4   22. d4   22... Ng4   23. Bh3   23... Nxf2   24. Bxe6+   24... Kh8   25. Qb6   25... Qxb6   26. Rxb6   26... e3   27. Rxc6   27... e2   28. Bxd5   28... e1=Q+   29. Kg2   29... Qh1#   0-1"},{"url":"https://www.chess.com/game/live/168337114586","title":"vs PorfirioAguilar (1797)","meta":"2026-05-06 · Blitz · English Opening Reversed Sicilian Variation · Mario con blancas · su rating 1802","hero":"w","res":"Tablas","rc":"draw","notes":{},"lesson":"","pgn":"1. c4   1... e5   2. Nc3   2... f5   3. d3   3... Nf6   4. g3   4... d5   5. Bg2   5... e4   6. cxd5   6... Nxd5   7. dxe4   7... Nxc3   8. Qxd8+   8... Kxd8   9. bxc3   9... fxe4   10. Bxe4   10... Nd7   11. Bf4   11... Nf6   12. O-O-O+   12... Ke7   13. Bg2   13... h6   14. Bxc7   14... Be6   15. Kb2   15... Kf7   16. Bxb7   16... Re8   17. Nf3   17... Bc5   18. Ne5+   18... Kg8   19. Ng6   19... Rh7   20. Rd8   20... Rxd8   21. Bxd8   21... Kf7   22. Rd1   22... Kxg6   23. f4   23... Ng4   24. e4   24... Nf2   25. f5+   25... Bxf5   26. exf5+   26... Kxf5   27. Rf1   27... Kg4   28. Bc7   28... g5   29. Bc8+   29... Kf3   30. Bb7+   30... Ke2   31. Ba6+   31... Kf3   32. Be5   32... Kg2   33. h4   33... Nd3+   34. Bxd3   34... Re7   35. Bd4   35... Bxd4   36. cxd4   36... Rd7   37. Kc3   37... gxh4   38. gxh4   38... Kg3   39. h5   39... Rd5   40. Bc2   40... Rxh5   41. Rf7   41... Rg5   42. Rxa7   42... h5   43. Be4   43... Kf4   44. Ba8   44... h4   45. Rh7   45... Kg3   46. a4   46... h3   47. Bc6   47... Rg6   48. Be4   48... Re6   49. Kd3   49... Ra6   50. Rg7+   50... Kf2   51. Rh7   51... Kg3   52. Ke3   52... Rxa4   53. Rg7+   53... Kh2   54. d5   54... Ra3+   55. Kf4   55... Ra2   56. d6   56... Rd2   57. d7   57... Rf2+   58. Ke5   58... Rd2   59. Bc6   59... Rd6   60. Ba8   60... Rd2   61. Ke6   61... Rd6+   62. Ke7   62... Rxd7+   63. Kxd7   1/2-1/2"},{"url":"https://www.chess.com/game/live/168336922168","title":"vs ayman8080 (1801)","meta":"2026-05-06 · Blitz · English Opening Anglo Indian Queens Knight Variation...3.g3 Bg7 · Mario con negras · su rating 1802","hero":"b","res":"Gana Mario","rc":"win","notes":{},"lesson":"","pgn":"1. c4   1... g6   2. Nc3   2... Bg7   3. g3   3... Nf6   4. Bg2   4... O-O   5. e3   5... Nc6   6. Nge2   6... d6   7. O-O   7... Bg4   8. h3   8... Bd7   9. d4   9... Qc8   10. Kh2   10... e5   11. b3   11... exd4   12. exd4   12... Nh5   13. Be3   13... Re8   14. Nd5   14... Ne7   15. Ndf4   15... Nxf4   16. Nxf4   16... Nf5   17. Re1   17... Nxe3   18. fxe3   18... c6   19. Rc1   19... Qc7   20. Qd2   20... Re7   21. e4   21... Rae8   22. h4   22... Bg4   23. Qd3   23... Bh6   24. Rc2   24... f5   25. e5   25... dxe5   26. dxe5   26... Rxe5   27. Rxe5   27... Qxe5   28. Nh3   28... Bxh3   29. Bxh3   29... f4   30. Qf3   30... fxg3+   31. Qxg3   31... Bf4   0-1"}]};/*DATA_END*/</script>
+
+<script defer src="assets/js/app.js"></script>
+</body>
+</html>
