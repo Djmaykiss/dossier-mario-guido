@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+
+# Caché local del actualizador (se regenera solo, no debe versionarse)
+.cache-archives/
+
+# Sistema operativo / editores
+Thumbs.db
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Netlify local
+.netlify/

@@ -1,0 +1,13 @@
+{
+  "name": "dossier-mario-guido",
+  "version": "2.0.0",
+  "description": "Dossier de scouting de ajedrez de Mario Guido (elBanano / TERRORRR): web interactiva con tableros jugables, datos reales de Chess.com/Lichess y actualización automática.",
+  "private": true,
+  "scripts": {
+    "update": "node update-dossier.js",
+    "start": "npx --yes serve ."
+  },
+  "keywords": ["ajedrez", "scouting", "chess", "dossier", "lichess", "chess.com"],
+  "author": "Preparado para Michael Perez",
+  "license": "MIT"
+}
