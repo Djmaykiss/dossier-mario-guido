@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dossier Mario Guido">
+  <rect width="64" height="64" rx="14" fill="#14150f"/>
+  <path d="M32 12a7 7 0 0 1 4.5 12.4c3 2 4.8 5.2 5.3 9.1l.9 7H21.3l.9-7c.5-3.9 2.3-7.1 5.3-9.1A7 7 0 0 1 32 12z" fill="#e2a24c"/>
+  <rect x="18" y="44" width="28" height="6" rx="3" fill="#e2a24c"/>
+  <circle cx="32" cy="33" r="1.6" fill="#b23020"/>
+</svg>

@@ -1,0 +1,28 @@
+# Configuración de despliegue en Netlify — sitio estático (sin build).
+# El HTML/CSS/JS se sirve tal cual; Netlify aplica compresión Brotli/gzip
+# automáticamente en la red y se encarga del CDN global.
+
+[build]
+  publish = "."
+  command = ""
+
+# Cabeceras de seguridad y de caché.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# El HTML se revalida siempre (para reflejar partidas nuevas al hacer push).
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Los recursos estáticos se cachean con revalidación.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
