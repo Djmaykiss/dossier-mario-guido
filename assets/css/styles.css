@@ -88,6 +88,12 @@ img{max-width:100%;height:auto}
 .icon-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 #menuBtn{display:none}
 .hspace{flex:1 1 auto}
+.profile-switch{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid var(--line);
+  background:var(--surface);border-radius:11px;box-shadow:var(--shadow-sm);flex:0 0 auto}
+.profile-pill{display:block;padding:6px 11px;border-radius:8px;color:var(--ink-soft);text-decoration:none;
+  font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.02em;transition:.15s}
+.profile-pill:hover{color:var(--ink);background:var(--surface-2)}
+.profile-pill.active{color:#fff;background:linear-gradient(145deg,var(--accent),var(--danger));box-shadow:var(--shadow-sm)}
 #themeBtn .sun{display:none}#themeBtn .moon{display:block}
 :root[data-theme="dark"] #themeBtn .sun{display:block}
 :root[data-theme="dark"] #themeBtn .moon{display:none}
@@ -138,6 +144,11 @@ nav .grp{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;text-
 .side-foot{margin:20px 8px 0;padding-top:14px;border-top:1px solid var(--line);
   font-size:11px;color:var(--ink-faint);line-height:1.5}
 .side-foot a{color:var(--accent);text-decoration:none}
+.side-profile{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 8px 16px}
+.side-profile a{display:block;padding:7px 8px;text-align:center;border:1px solid var(--line);border-radius:8px;
+  color:var(--ink-soft);text-decoration:none;font:700 10px var(--font-mono)}
+.side-profile a:hover{background:var(--surface-2);color:var(--ink)}
+.side-profile a.active{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
 .scrim{position:fixed;inset:var(--header-h) 0 0 0;background:rgba(10,8,4,.42);z-index:85;opacity:0;
   visibility:hidden;transition:opacity .28s}
 .scrim.show{opacity:1;visibility:visible}
@@ -377,3 +388,4 @@ footer b{color:var(--ink-soft)}
   .game,.card,.kpi{break-inside:avoid;box-shadow:none}
   body{background:#fff}
 }
+
