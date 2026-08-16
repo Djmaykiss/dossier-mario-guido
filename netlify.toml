@@ -21,8 +21,14 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+[[headers]]
+  for = "/nahum.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 # Los recursos estáticos se cachean con revalidación.
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
+
